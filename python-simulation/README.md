@@ -8,15 +8,17 @@ The Python script implements the simulation of the models presented in the AdaMI
 
 ```
 .
+├── README.md       : This file
 ├── capacitor.py    : Capacitor specification
 ├── charts.py       : Printing 3D and 2D diagrams
 ├── common.py       : Reading and sharing data from the configuration file
 ├── config.json     : Configuration file
 ├── cpu.py          : CPU(s) specification
-├── README.md       : This file
 ├── sim_main.py     : Main file that runs the simulation
 ├── sstm.py         : System specification
 ```
 
 ## Output
+
+<img src="../img/3d3p.svg" width="300">
 
