@@ -4,6 +4,12 @@
 
 The Python script implements the simulation of the models presented in the AdaMICA paper. The configurations of the target system are provided in a separate configuration file. The simulation outputs 3D and 2D plots showing the performance and energy consumption of the system under different internal and external conditions such as capacitor size, parallel fraction, number of cores, and input power level.
 
+## Dependencies
+
+- [Python (>= 2.7)](https://www.python.org/downloads/)
+- [NumPy](https://numpy.org/)
+- [Matplotlib](https://matplotlib.org/)
+
 ## Content of the Project
 
 ```
