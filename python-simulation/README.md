@@ -23,12 +23,14 @@ The Python script implements the simulation of the models presented in the AdaMI
 ### 3D plots
 
 The performance dependence on the incoming power and the number of cores working on a task
+
 <p float="left">
-  <img src="../img/3dAll.svg" width="300">
-  <img src="../img/3d1p.svg" width="300">
-  <img src="../img/3d2p.svg" width="300">
-  <img src="../img/3d3p.svg" width="300">
+  <img src="../img/3dAll.svg" width="350">
+  <img src="../img/3d1p.svg" width="350">
+  <img src="../img/3d2p.svg" width="350">
+  <img src="../img/3d3p.svg" width="350">
 </p>
+
 ### 2D plots
 
 Comparison of the speed up and the energy efficiency drop of multicore intermittent systems.
