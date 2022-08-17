@@ -24,6 +24,12 @@ The Python script implements the simulation of the models presented in the AdaMI
 ├── sstm.py         : System specification
 ```
 
+## How to run?
+
+```
+python sim_main.py
+```
+
 ## Output
 
 ### 3D plots
