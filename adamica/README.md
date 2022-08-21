@@ -2,7 +2,7 @@
 
 ## Description
 
-In this toy example, AdaMICA is used to implement matrix-matrix multiplication on emulated dual-core system.
+In this toy example, AdaMICA is used to implement matrix-matrix multiplication on an emulated dual-core system.
 
 ## Dependencies
 
@@ -13,7 +13,7 @@ In this toy example, AdaMICA is used to implement matrix-matrix multiplication o
 
 ```
 .
-├── Inluces
+├── Includes
     ├── adamicalib
         ├── adamica.c       : AdaMICA library
         ├── adamica.h       : AdaMICA library
@@ -32,10 +32,10 @@ In this toy example, AdaMICA is used to implement matrix-matrix multiplication o
 
 ## How to run?
 
-Open the project in CCS, connect the hardware setup, and press "Debug" button.
+Open the project in CCS, connect the hardware setup, and press the "Debug" button.
 
 ## Hardware Setup
 
-For this implementation, we used two MSP430FR5994 boards representing two cores. As a shared memory, we used external 4MB FRAM from Adafruit. The energy harvester is a solar pannel with a 1500 uF capacitor. The schematic representation of the setup is shown below.
+For this implementation, we used two MSP430FR5994 boards representing two cores. As a shared memory, we used external 4MB FRAM from Adafruit. The energy harvester is a solar panel with a 1500 uF capacitor. The schematic representation of the setup is shown below.
 
 <img src="../img/hw-setup.svg" width="450">
