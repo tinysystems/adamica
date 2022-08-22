@@ -7,6 +7,7 @@
 
 #include <adamica.h>
 #include <fram.h>
+#include <input.h>
 
 #define SLAVE_CS_OUT    P8OUT
 #define SLAVE_CS_DIR    P8DIR
@@ -19,7 +20,7 @@
 #define SMCLK_FREQUENCY         1000000
 
 typedef struct{
-    uint16_t c[6][6];
+    uint16_t c[OUTPUT_HEIGHT][OUTPUT_HEIGHT];
     uint16_t i;
     uint16_t j;
     uint16_t k;
@@ -36,24 +37,8 @@ uint8_t nvsStorage1[NVS_DATA_STORAGE_SIZE(sizeof(data_t))] = {0};
 nvs_data_handle nvsHandle;
 uint16_t status;
 
-uint8_t a[6][6] = {
-                  {4,5,6,1,2,3},
-                  {4,5,6,1,2,3},
-                  {4,5,6,1,2,3},
-                  {4,5,6,1,2,3},
-                  {4,5,6,1,2,3},
-                  {4,5,6,1,2,3}
-};
-uint8_t b[6][6] = {
-                  {4,5,6,1,2,3},
-                  {4,5,6,1,2,3},
-                  {4,5,6,1,2,3},
-                  {4,5,6,1,2,3},
-                  {4,5,6,1,2,3},
-                  {4,5,6,1,2,3}
-};
 
-void multiply(uint8_t[][6], uint8_t[][6], uint16_t[][6]);
+void multiply(uint8_t[][INPUT_HEIGHT], uint8_t[][INPUT_HEIGHT], uint16_t[][OUTPUT_HEIGHT]);
 void initClockTo16MHz(void);
 void initGPIO(void);
 void initSPI(void);
@@ -87,18 +72,18 @@ int main(void)
     return 0;
 }
 
-void multiply(uint8_t a[][6], uint8_t b[][6], uint16_t c[][6]){
+void multiply(uint8_t a[][INPUT_HEIGHT], uint8_t b[][INPUT_HEIGHT], uint16_t c[][OUTPUT_HEIGHT]){
 
     // Initialise all the elements of output matrix to 0
-    int n,m;
-    for(n = 0; n < 6; n++){
-        for(m = 0; m < 6; m++){
-            data.c[n][m] = 0;
+    int nOut,mOut;
+    for(nOut = 0; nOut < OUTPUT_HEIGHT; nOut++){
+        for(mOut = 0; mOut < OUTPUT_WIDTH; mOut++){
+            data.c[nOut][mOut] = 0;
         }
     }
 
-    data.n = 6;
-    data.m = 6;
+    data.n = INPUT_HEIGHT;
+    data.m = INPUT_WIDTH;
 
     data.fn = &multiply;
 
