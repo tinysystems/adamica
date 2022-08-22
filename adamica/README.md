@@ -21,7 +21,7 @@ In this toy example, AdaMICA is used to implement matrix-matrix multiplication o
         ├── extfram.c       : Access to external FRAM
         ├── extfram.h       : Access to external FRAM
         ├── fram.h          : FRAM attributes
-	├── input.h		  : Input 2D arrays 
+	├── input.h	    : Input 2D arrays 
 ├── fram-unilities
     ├── ctpl                : Compute Through Power Loss Library
     ├── nvs                 : Non-Volatile Storage Libraty
